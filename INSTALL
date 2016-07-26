@@ -1,0 +1,9 @@
+Building TrollpaymentGateway
+
+See doc/readme-qt.rst for instructions on building TrollpaymentGateway QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of TrollpaymentGateway.
+
+See doc/build-*.txt for instructions on building TrollpaymentGatewayd,
+the intended-for-services, no-graphical-interface, reference
+implementation of TrollpaymentGateway.
