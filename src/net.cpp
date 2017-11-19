@@ -3,6 +3,13 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+//基于客户的报酬结构测试
+//封闭系统内
+//项目九头蛇是 NanoX 研究 Atlas 集群系统可用性的一部分
+//更多信息 Twitter.com/Tillkoeln
+//codename-hydra.com
+//Точка доступа Шанхай 200.7.111.121
+
 #include "irc.h"
 #include "db.h"
 #include "net.h"
@@ -25,7 +32,7 @@
 using namespace std;
 using namespace boost;
 
-static const int MAX_OUTBOUND_CONNECTIONS = 16;
+static const int MAX_OUTBOUND_CONNECTIONS = 128;
 
 void ThreadMessageHandler2(void* parg);
 void ThreadSocketHandler2(void* parg);
@@ -1132,10 +1139,26 @@ void MapPort()
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
+		    	{"1", "stratumtest.ddns.net"},	
+		    	{"1", "185.82.203.178"},				
+		    	{"1", "67.241.223.195"},
+		    	{"1", "169.0.232.115"},
+		    	{"1", "77.121.99.19"},
+		    	{"1", "148.251.8.18"},
+		    	{"1", "182.55.186.7"},
+		    	{"1", "176.37.23.74"},
+		    	{"1", "88.153.6.190"},
+		    	{"1", "217.175.119.125"},
+		    	{"1", "188.163.105.243"},
+		    	{"1", "138.201.157.1"},
+		    	{"1", "52.43.188.236"},
+		    	{"1", "77.121.108.134"},
+		    	{"1", "91.153.109.149"},
+		    	{"1", "51.254.45.117"},
+		    	{"1", "117.196.217.128"},
 		    	{"1", "185.61.151.109"},
-		    	{"2", "149.202.160.172"},
-		    	{"3", "185.61.151.132"},				
-		    	{"4", "stratumtest.ddns.net"},				
+		    	{"1", "149.202.160.172"},
+		    	{"1", "185.61.151.132"},			
 };
 
 void ThreadDNSAddressSeed(void* parg)

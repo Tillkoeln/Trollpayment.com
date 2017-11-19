@@ -3,6 +3,11 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+//基于客户的报酬结构测试
+//封闭系统内
+//项目九头蛇是 NanoX 研究 Atlas 集群系统可用性的一部分
+//更多信息 Twitter.com/Tillkoeln
+
 #include "alert.h"
 #include "checkpoints.h"
 #include "db.h"

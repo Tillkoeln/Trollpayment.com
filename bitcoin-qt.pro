@@ -1,6 +1,6 @@
 TEMPLATE = app
 TARGET = TrollpaymentGateway-qt
-VERSION = 1.0.0
+VERSION = 1.1.0
 INCLUDEPATH += src src/json src/qt
 QT += core gui network
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
@@ -281,7 +281,11 @@ HEADERS += src/qt/bitcoingui.h \
     src/sph_fugue.h \
     src/sph_hamsi.h \
     src/sph_types.h \
-    src/clientversion.h
+    src/clientversion.h\
+    src/qt/blockbrowser.h \
+    src/qt/serveur.h \
+    src/qt/chatwindow.h \
+    src/qt/statisticspage.h
 
 SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/transactiontablemodel.cpp \
@@ -360,7 +364,11 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/zerocoin/Params.cpp \
     src/zerocoin/SerialNumberSignatureOfKnowledge.cpp \
     src/zerocoin/SpendMetaData.cpp \
-    src/zerocoin/ZeroTest.cpp
+    src/zerocoin/ZeroTest.cpp \
+    src/qt/blockbrowser.cpp \
+    src/qt/serveur.cpp \
+    src/qt/chatwindow.cpp \
+    src/qt/statisticspage.cpp
 
 RESOURCES += \
     src/qt/bitcoin.qrc
@@ -377,7 +385,10 @@ FORMS += \
     src/qt/forms/sendcoinsentry.ui \
     src/qt/forms/askpassphrasedialog.ui \
     src/qt/forms/rpcconsole.ui \
-    src/qt/forms/optionsdialog.ui
+    src/qt/forms/optionsdialog.ui \
+    src/qt/forms/blockbrowser.ui \
+    src/qt/forms/chatwindow.ui \
+    src/qt/forms/statisticspage.ui
 
 contains(USE_QRCODE, 1) {
 HEADERS += src/qt/qrcodedialog.h
